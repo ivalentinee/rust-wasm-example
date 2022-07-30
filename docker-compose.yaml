@@ -1,0 +1,10 @@
+version: '3.6'
+services:
+  app:
+    build: .
+    command: node out/browser/server.js
+    volumes:
+      - ./:/app
+    working_dir: '/app'
+    ports:
+      - 8000:8000
